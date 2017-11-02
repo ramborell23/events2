@@ -9,22 +9,24 @@ function newList() {
     }
 }
 
+
 var listItems = document.querySelector("ul");
 
 listItems.addEventListener("click", function (event) {
     let target = event.target
     if (target.tagName.toUpperCase() == 'LI') {
-        target.style.textDecoration = 
-        target.style.textDecoration !== 'line-through' ? 'line-through' : 'none'
+        target.style.textDecoration =
+            target.style.textDecoration !== 'line-through' ? 'line-through' : 'none'
     }
 })
 
-let submit = document.querySelector("#submit");
+var submit = document.querySelector("#submit");
 submit.addEventListener("click", function (event) {
     event.preventDefault();
     newList();
     // console.log(listItems.childNodes.length);
 })
+
 
 let button = document.querySelector("#button");
 button.addEventListener("click", function (event) {
